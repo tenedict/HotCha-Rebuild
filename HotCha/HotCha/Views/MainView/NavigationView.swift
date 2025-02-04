@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
-//  HotCha: Rebuild
+//  SegmentedNavigation.swift
+//  HotCha
 //
-//  Created by 문재윤 on 1/31/25.
+//  Created by 문재윤 on 2/4/25.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct NavigationView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,6 +19,3 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}

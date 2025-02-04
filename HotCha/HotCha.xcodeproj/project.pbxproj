@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		9D42B57B2D4CD67C0021B763 /* HotCha: Rebuild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HotCha: Rebuild.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD91FA92D522CB600789318 /* HotCha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotCha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9D42B57D2D4CD67C0021B763 /* HotCha: Rebuild */ = {
+		9DD91FAB2D522CB600789318 /* HotCha */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "HotCha: Rebuild";
+			path = HotCha;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9D42B5782D4CD67C0021B763 /* Frameworks */ = {
+		9DD91FA62D522CB600789318 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D42B5722D4CD67C0021B763 = {
+		9DD91FA02D522CB600789318 = {
 			isa = PBXGroup;
 			children = (
-				9D42B57D2D4CD67C0021B763 /* HotCha: Rebuild */,
-				9D42B57C2D4CD67C0021B763 /* Products */,
+				9DD91FAB2D522CB600789318 /* HotCha */,
+				9DD91FAA2D522CB600789318 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9D42B57C2D4CD67C0021B763 /* Products */ = {
+		9DD91FAA2D522CB600789318 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9D42B57B2D4CD67C0021B763 /* HotCha: Rebuild.app */,
+				9DD91FA92D522CB600789318 /* HotCha.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9D42B57A2D4CD67C0021B763 /* HotCha: Rebuild */ = {
+		9DD91FA82D522CB600789318 /* HotCha */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D42B5892D4CD67E0021B763 /* Build configuration list for PBXNativeTarget "HotCha: Rebuild" */;
+			buildConfigurationList = 9DD91FB72D522CB700789318 /* Build configuration list for PBXNativeTarget "HotCha" */;
 			buildPhases = (
-				9D42B5772D4CD67C0021B763 /* Sources */,
-				9D42B5782D4CD67C0021B763 /* Frameworks */,
-				9D42B5792D4CD67C0021B763 /* Resources */,
+				9DD91FA52D522CB600789318 /* Sources */,
+				9DD91FA62D522CB600789318 /* Frameworks */,
+				9DD91FA72D522CB600789318 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9D42B57D2D4CD67C0021B763 /* HotCha: Rebuild */,
+				9DD91FAB2D522CB600789318 /* HotCha */,
 			);
-			name = "HotCha: Rebuild";
+			name = HotCha;
 			packageProductDependencies = (
 			);
-			productName = "HotCha: Rebuild";
-			productReference = 9D42B57B2D4CD67C0021B763 /* HotCha: Rebuild.app */;
+			productName = HotCha;
+			productReference = 9DD91FA92D522CB600789318 /* HotCha.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9D42B5732D4CD67C0021B763 /* Project object */ = {
+		9DD91FA12D522CB600789318 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					9D42B57A2D4CD67C0021B763 = {
+					9DD91FA82D522CB600789318 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
-			buildConfigurationList = 9D42B5762D4CD67C0021B763 /* Build configuration list for PBXProject "HotCha: Rebuild" */;
+			buildConfigurationList = 9DD91FA42D522CB600789318 /* Build configuration list for PBXProject "HotCha" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 9D42B5722D4CD67C0021B763;
+			mainGroup = 9DD91FA02D522CB600789318;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 9D42B57C2D4CD67C0021B763 /* Products */;
+			productRefGroup = 9DD91FAA2D522CB600789318 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9D42B57A2D4CD67C0021B763 /* HotCha: Rebuild */,
+				9DD91FA82D522CB600789318 /* HotCha */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9D42B5792D4CD67C0021B763 /* Resources */ = {
+		9DD91FA72D522CB600789318 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9D42B5772D4CD67C0021B763 /* Sources */ = {
+		9DD91FA52D522CB600789318 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9D42B5872D4CD67E0021B763 /* Debug */ = {
+		9DD91FB52D522CB700789318 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		9D42B5882D4CD67E0021B763 /* Release */ = {
+		9DD91FB62D522CB700789318 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,14 +244,14 @@
 			};
 			name = Release;
 		};
-		9D42B58A2D4CD67E0021B763 /* Debug */ = {
+		9DD91FB82D522CB700789318 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HotCha: Rebuild/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HotCha/Preview Content\"";
 				DEVELOPMENT_TEAM = UW9295Z57Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -265,7 +265,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "SSan.HotCha--Rebuild";
+				PRODUCT_BUNDLE_IDENTIFIER = SSan.HotCha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -273,14 +273,14 @@
 			};
 			name = Debug;
 		};
-		9D42B58B2D4CD67E0021B763 /* Release */ = {
+		9DD91FB92D522CB700789318 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HotCha: Rebuild/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HotCha/Preview Content\"";
 				DEVELOPMENT_TEAM = UW9295Z57Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -294,7 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "SSan.HotCha--Rebuild";
+				PRODUCT_BUNDLE_IDENTIFIER = SSan.HotCha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,25 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9D42B5762D4CD67C0021B763 /* Build configuration list for PBXProject "HotCha: Rebuild" */ = {
+		9DD91FA42D522CB600789318 /* Build configuration list for PBXProject "HotCha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9D42B5872D4CD67E0021B763 /* Debug */,
-				9D42B5882D4CD67E0021B763 /* Release */,
+				9DD91FB52D522CB700789318 /* Debug */,
+				9DD91FB62D522CB700789318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9D42B5892D4CD67E0021B763 /* Build configuration list for PBXNativeTarget "HotCha: Rebuild" */ = {
+		9DD91FB72D522CB700789318 /* Build configuration list for PBXNativeTarget "HotCha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9D42B58A2D4CD67E0021B763 /* Debug */,
-				9D42B58B2D4CD67E0021B763 /* Release */,
+				9DD91FB82D522CB700789318 /* Debug */,
+				9DD91FB92D522CB700789318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9D42B5732D4CD67C0021B763 /* Project object */;
+	rootObject = 9DD91FA12D522CB600789318 /* Project object */;
 }
