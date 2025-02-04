@@ -6,15 +6,25 @@
 ---
 
 ## 📂 프로젝트 구조
+
 MyApp
+
 ├── 📂 Models            # 데이터 모델 정의
+
 ├── 📂 Views             # SwiftUI 화면(View) 파일
+
 ├── 📂 ViewModels        # 비즈니스 로직 (MVVM 패턴)
+
 ├── 📂 Components        # 재사용 가능한 UI 컴포넌트
+
 ├── 📂 Services          # 네트워크, 데이터 처리
+
 ├── 📂 Utils             # 유틸리티, 확장 기능
+
 ├── 📂 Resources         # 이미지, 로컬라이제이션 파일
+
 └── 📂 App               # App 진입점 및 설정 파일
+
 ---
 # 📌 개발 규칙
 
@@ -38,4 +48,5 @@ MyApp
     - @StateObject 사용 시 private 접근 제어자 적용
     - ObservableObject는 final class로 선언
     - 뷰 파일명은 ScreenNameView.swift 형태로 작성 (예: HomeView.swift)
+    - 색상과 폰트는 각각 에셋과 커스텀폰트만 사용
 
