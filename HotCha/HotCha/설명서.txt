@@ -1,15 +1,13 @@
-//
-//  Untitled.swift
-//  HotCha
-//
-//  Created by 문재윤 on 2/4/25.
-//
 
-import SwiftUI
 
-struct MainView: View {
-    var body: some View {
-        VStack{
+폰트를 보면
+.font(.system(size: 24, weight: .semibold))
+이거는 기본
+
+
+.font(.pretendard(.semibold, size: 24))
+우리는 이것을 사용해야 합니다.
+
             Text("안녕 세상")
                 .font(.pretendard(.bold, size: 24))
             Text("안녕 세상")
@@ -29,5 +27,3 @@ struct MainView: View {
             Text("안녕 세상")
                 .font(.pretendard(.medium, size: 24))
 
-        }}
-}
