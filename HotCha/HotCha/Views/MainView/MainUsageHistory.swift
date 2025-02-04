@@ -8,6 +8,17 @@ import SwiftUI
 
 struct MainUsageHistoryView: View {
     var body: some View {
-        Text("UsageHistory")    
+        VStack{
+            Spacer()
+            HStack{
+                Spacer()
+                Text("이용기록")
+                Spacer()
+            }
+            Spacer()
+            
+        }
+        .frame( width: .infinity, height: .infinity)
+        .background(Color("gray50"))
     }
 }

@@ -10,24 +10,17 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         VStack{
-            Text("안녕 세상")
-                .font(.pretendard(.bold, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.semibold, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.light, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.heavy, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.ultraLight, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.light, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.thin, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.black, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.medium, size: 24))
-
-        }}
+            Spacer()
+            HStack{
+                Spacer()
+                Text("홈")
+                Spacer()
+            }
+            Spacer()
+            
+        }
+        .frame( width: .infinity, height: .infinity)
+        .background(Color("gray50"))
+    }
+        
 }

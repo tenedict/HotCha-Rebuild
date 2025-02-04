@@ -9,6 +9,17 @@ import SwiftUI
 
 struct MainSettingView: View {
     var body: some View {
-        Text("Setting")
+        VStack{
+            Spacer()
+            HStack{
+                Spacer()
+                Text("설정")
+                Spacer()
+            }
+            Spacer()
+            
+        }
+        .frame( width: .infinity, height: .infinity)
+        .background(Color("gray50"))
     }
 }

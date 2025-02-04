@@ -14,43 +14,54 @@ struct NavigationView: View {
     var body: some View {
                VStack {
                    HStack {
-                       Button(action: {
-                           withAnimation { selectedTab = 0 }
-                       }) {
-                           Text("홈")
-                               .foregroundColor(selectedTab == 0 ? .white : .black)
-                               .padding()
-                               .frame(maxWidth: .infinity)
-                               .background(selectedTab == 0 ? Color.blue : Color.clear)
-                               .cornerRadius(10)
-                       }
+                       // 위치 정보
+                       Image("mappin")
+                           .padding(.leading, 20)
+                       Text("부산광역시")
+                           .font(.pretendard(.semibold, size: 16))
+                           .foregroundStyle(Color("gray150"))
+                       Spacer()
                        
-                       Button(action: {
-                           withAnimation { selectedTab = 1 }
-                       }) {
-                           Text("이용기록")
-                               .foregroundColor(selectedTab == 1 ? .white : .black)
-                               .padding()
-                               .frame(maxWidth: .infinity)
-                               .background(selectedTab == 1 ? Color.blue : Color.clear)
-                               .cornerRadius(10)
-                       }
                        
-                       Button(action: {
-                           withAnimation { selectedTab = 2 }
-                       }) {
-                           Text("설정")
-                               .foregroundColor(selectedTab == 2 ? .white : .black)
-                               .padding()
-                               .frame(maxWidth: .infinity)
-                               .background(selectedTab == 2 ? Color.blue : Color.clear)
-                               .cornerRadius(10)
-                       }
+                       // 홈 버튼
+                       Text("홈")
+                           .padding(.horizontal,10)
+                           .font(selectedTab == 0 ? .pretendard(.bold, size: 24) : .pretendard(.regular, size: 24))
+                           .foregroundColor(selectedTab == 0 ? Color("mainpurple") : Color("gray600"))
+                           .onTapGesture {
+                               withAnimation {
+                                   selectedTab = 0
+                               }
+                           }
+                       
+                       // 이용기록 버튼
+                       Text("이용 기록")
+                           .padding(.horizontal,10)
+                           .font(selectedTab == 1 ? .pretendard(.bold, size: 24) : .pretendard(.regular, size: 24))
+                           .foregroundColor(selectedTab == 1 ? Color("mainpurple") : Color("gray600"))
+                           .onTapGesture {
+                               withAnimation {
+                                   selectedTab = 1
+                               }
+                           }
+                       
+                       // 설정 버튼
+                       Text("설정")
+                           .padding(.horizontal,10)
+                           .padding(.trailing, 10)
+                           .font(selectedTab == 2 ? .pretendard(.bold, size: 24) : .pretendard(.regular, size: 24))
+                           .foregroundColor(selectedTab == 2 ? Color("mainpurple") : Color("gray600"))
+                           .onTapGesture {
+                               withAnimation {
+                                   selectedTab = 2
+                               }
+                           }
                    }
-                   .padding()
-                   .background(Color.gray.opacity(0.2)) // 탭바 배경색
+                   .frame(width: .infinity, height: 62)
+                   .padding(.top, 54)
+                   
 
-
+                // 아래쪽 탭뷰
                    TabView(selection: $selectedTab) {
                        MainView()
                            .tag(0)
@@ -59,14 +70,21 @@ struct NavigationView: View {
                        MainSettingView()
                            .tag(2)
                    }
+                   .cornerRadius(10)
+                   .ignoresSafeArea()
+                   
                    // 인디케이터 숨겼음, 페이지 탭뷰로 스와이프 기능 넣음
                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-               }
+               }.background(Color("gray700")) // 전채 배경색
+            // 아래쪽 여백 제거
+            .ignoresSafeArea(.all)
+            
+
            
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NavigationView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView()
     }
