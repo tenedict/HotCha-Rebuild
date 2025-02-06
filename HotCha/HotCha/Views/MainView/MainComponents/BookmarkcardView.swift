@@ -46,6 +46,8 @@ struct BookmarkcardView: View {
             }
             .padding(12)
         }
+        .background(isTapped ? Color("gray300") : Color("gray150"))
+        .cornerRadius(8)
         .onTapGesture {
             withAnimation {
                 isTapped = true
@@ -56,9 +58,7 @@ struct BookmarkcardView: View {
                 }
             }
         }
-        .background(isTapped ? Color("gray300") : Color("gray150"))
-        .cornerRadius(8)
-        
+
     }
 }
 

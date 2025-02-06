@@ -10,16 +10,54 @@ import SwiftUI
 struct MainSettingView: View {
     var body: some View {
         VStack{
-            Spacer()
-            HStack{
-                Spacer()
-                Text("설정")
+            VStack(spacing: 24) {
+                
+               VStack(spacing: 12) {
+                    HStack {
+                        Text("고객지원")
+                            .font(.pretendard(.semibold, size: 16))
+                            .foregroundStyle(Color("gray800"))
+                        Spacer()
+                    }
+                    
+                    SettingCardView(icon: "mailicon", name: "핫챠 문의하기")
+                    
+                    SettingCardView(icon: "questionmarkicon", name: "자주 묻는 질문")
+                    
+                    SettingCardView(icon: "fileicon", name: "이용약관 및 개인정보처리방침")
+                    
+                }
+                
+                
+                VStack(spacing: 12) {
+                    HStack {
+                        Text("앱정보")
+                            .font(.pretendard(.semibold, size: 16))
+                            .foregroundStyle(Color("gray800"))
+                        Spacer()
+                    }
+                    
+                     
+                    
+                    SettingCardView(icon: "fileicon", name: " 버전 정보")
+
+                }
+                
+                
+                
+                
                 Spacer()
             }
-            Spacer()
-            
+            .padding(20)
         }
         .frame( maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("gray50"))
+        
+    }
+}
+
+struct MainSetting_Previews: PreviewProvider {
+    static var previews: some View {
+        MainSettingView()
     }
 }
