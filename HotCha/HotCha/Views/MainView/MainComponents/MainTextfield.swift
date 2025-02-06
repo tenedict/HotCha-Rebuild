@@ -15,7 +15,6 @@ struct MainTextfiled: View {
         VStack {
             HStack{
                 Text("어디서 알려드릴까요?")
-                    .padding(.top, 14)
                     .font(.pretendard(.bold, size: 24))
                 Spacer()
             }
@@ -29,19 +28,19 @@ struct MainTextfiled: View {
                 }
                 .padding(16)
             }
+            .frame(height: 52)
+            .background(isTapped ? Color("gray300") : Color("gray150"))
+            .cornerRadius(8)
             .onTapGesture {
                 withAnimation {
                     isTapped = true
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { 
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     withAnimation {
                         isTapped = false
                     }
                 }
             }
-            .frame(height: 52)
-            .background(isTapped ? Color("gray300") : Color("gray150"))
-            .cornerRadius(8)
         }
     }
 }

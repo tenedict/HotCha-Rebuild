@@ -83,7 +83,7 @@ struct NavigationView: View {
                    
                    // 인디케이터 숨겼음, 페이지 탭뷰로 스와이프 기능 넣음
                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-               }.background(Color("gray700")) // 전채 배경색
+               }.background(Color("gray900")) // 전채 배경색
             // 아래쪽 여백 제거
             .ignoresSafeArea(.all)
             

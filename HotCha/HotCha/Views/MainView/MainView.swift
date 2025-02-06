@@ -10,14 +10,14 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         // 메인뷰 전체
-        VStack{
+        VStack(spacing: 24) {
             
             // '버스번호를 알려주세요' 텍스트 필드
             MainTextfiled()
             
             // 즐겨찾기 항목들
             BookmarkView()
-                .padding(.top, 24)
+
             
             Spacer()
 
