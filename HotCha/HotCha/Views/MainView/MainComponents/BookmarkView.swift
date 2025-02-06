@@ -25,8 +25,8 @@ struct BookmarkView: View {
             
             // 고정된 즐겨찾기
             HStack(spacing: 15) {
-                BookmarkcardView()
-                BookmarkcardView()
+                BookmarkcardView(name: "집", image: "houseicon")
+                BookmarkcardView(name: "회사", image: "buildingicon")
             }
             
             // 직접 추가하는 즐겨찾기

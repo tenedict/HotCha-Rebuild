@@ -18,7 +18,7 @@ struct MainUsageHistoryView: View {
             Spacer()
             
         }
-        .frame( width: .infinity, height: .infinity)
+        .frame( maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("gray50"))
     }
 }
