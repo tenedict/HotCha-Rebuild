@@ -10,17 +10,18 @@ import SwiftUI
 import SwiftUI
 
 struct BookmarkcardView: View {
-//    var iconImage: String
-//    var title: String
-//    var descriptionLines: [String]
-//    var chevronImage: String
+    let name: String
+    let image: String
+    
+    @State private var isTapped: Bool = false
+
 
     var body: some View {
         VStack {
             VStack{
                 HStack {
-                    Image("houseicon")
-                    Text("집")
+                    Image(image)
+                    Text(name)
                         .font(.pretendard(.bold, size: 14))
                     
                     Spacer()
@@ -45,7 +46,17 @@ struct BookmarkcardView: View {
             }
             .padding(12)
         }
-        .background(Color("gray150"))
+        .onTapGesture {
+            withAnimation {
+                isTapped = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                withAnimation {
+                    isTapped = false
+                }
+            }
+        }
+        .background(isTapped ? Color("gray300") : Color("gray150"))
         .cornerRadius(8)
         
     }

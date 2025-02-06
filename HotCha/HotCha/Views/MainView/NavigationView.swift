@@ -57,21 +57,29 @@ struct NavigationView: View {
                                }
                            }
                    }
-                   .frame(width: .infinity, height: 62)
+                   .frame(height: 62)
                    .padding(.top, 54)
                    
 
                 // 아래쪽 탭뷰
                    TabView(selection: $selectedTab) {
                        MainView()
+                           .cornerRadius(10)
+                           .ignoresSafeArea()
+                           .padding(.horizontal, 2)
                            .tag(0)
                        MainUsageHistoryView()
+                           .cornerRadius(10)
+                           .ignoresSafeArea()
+                           .padding(.horizontal, 2)
                            .tag(1)
                        MainSettingView()
+                           .cornerRadius(10)
+                           .ignoresSafeArea()
+                           .padding(.horizontal, 2)
                            .tag(2)
                    }
-                   .cornerRadius(10)
-                   .ignoresSafeArea()
+                   
                    
                    // 인디케이터 숨겼음, 페이지 탭뷰로 스와이프 기능 넣음
                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
