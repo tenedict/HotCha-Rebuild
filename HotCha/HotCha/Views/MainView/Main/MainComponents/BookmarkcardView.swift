@@ -21,7 +21,7 @@ struct BookmarkcardnothingView: View {
                     Image(image)
                     Text(name)
                         .font(.pretendard(.bold, size: 14))
-                    
+                        .foregroundStyle(Color("gray900"))
                     Spacer()
                     
                     Image("plusicon")

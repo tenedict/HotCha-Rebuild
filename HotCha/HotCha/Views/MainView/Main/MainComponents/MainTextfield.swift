@@ -17,6 +17,7 @@ struct MainTextfiled: View {
             HStack{
                 Text("어디서 알려드릴까요?")
                     .font(.pretendard(.bold, size: 24))
+                    .foregroundStyle(Color("gray900"))
                 Spacer()
             }
             HStack{

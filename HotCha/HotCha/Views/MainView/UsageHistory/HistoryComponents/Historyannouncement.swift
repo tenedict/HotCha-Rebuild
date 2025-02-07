@@ -13,6 +13,7 @@ struct Historyannouncement: View {
                 HStack {
                     Text("버스에서 물건을 잃어버렸다면?")
                         .font(.pretendard(.semibold, size: 16))
+                        .foregroundStyle(Color("gray900"))
                     Spacer()
                 }
                 

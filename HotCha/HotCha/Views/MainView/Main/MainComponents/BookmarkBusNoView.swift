@@ -17,7 +17,7 @@ struct BookmarkBusNoView: View {
         case "시내":
             return Color("bluec")
         case "일반":
-            return Color("bluc")
+            return Color("bluec")
         case "간선":
             return Color("skybluec")
         case "지선":

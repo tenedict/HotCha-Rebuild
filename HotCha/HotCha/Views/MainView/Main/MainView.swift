@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @State var isEditMode: Bool = false
+    
     var body: some View {
         // 메인뷰 전체
         VStack(spacing: 24) {

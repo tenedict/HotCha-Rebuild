@@ -30,16 +30,16 @@ struct MainSettingView: View {
                 
                 
                 VStack(spacing: 12) {
-                    HStack {
+                    HStack(spacing: 6) {
                         Text("앱정보")
                             .font(.pretendard(.semibold, size: 16))
                             .foregroundStyle(Color("gray800"))
-                        Spacer()
+                                                Spacer()
                     }
                     
                      
                     
-                    SettingCardView(icon: "fileicon", name: " 버전 정보")
+                    SettingCardversionView(icon: "fileicon", name: "버전 정보", version: getAppVersion() ?? "0.0.0")
 
                 }
                 
