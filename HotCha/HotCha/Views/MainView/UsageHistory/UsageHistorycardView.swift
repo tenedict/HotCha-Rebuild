@@ -7,14 +7,18 @@
 import SwiftUI
 
 struct UsageHistorycardView: View {
+    @Environment(\.modelContext) private var modelContext
+    var history: Usage_history
+    
     var body: some View {
         VStack {
             VStack(spacing: 14) {
                 HStack {
-                    BookmarkBusNoView(busNo: "99", route_type: "시내")
+                    BookmarkBusNoView(busNo: history.bus_no, route_type: history.route_type)
                     Spacer()
-                    Text("2025.02.07")
+                    Text(formattedDate(from: history.get_off_timestamp))
                         .font(.pretendard(.medium, size: 14))
+                        .foregroundStyle(Color("gray500"))
                 }
                 HStack(spacing: 24) {
                     VStack(alignment: .leading, spacing: 10) {
@@ -28,11 +32,11 @@ struct UsageHistorycardView: View {
                     .foregroundStyle(Color("gray600"))
                     
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("2호선")
-                        Text("2호선")
-                        Text("2호선")
-                        Text("2호선")
-                        Text("2호선")
+                        Text(history.destination_stop_name)
+                        Text(formattedTime(from: history.get_off_timestamp))
+                        Text(history.vehicle_no)
+                        Text(history.operator_name ?? "정보 없음")
+                        Text(history.operator_no ?? "정보 없음")
                     }
                     .font(.pretendard(.semibold, size: 14))
                     .foregroundStyle(Color("gray800"))
@@ -52,8 +56,3 @@ struct UsageHistorycardView: View {
 
 
 
-struct UsageHistorycard_Previews: PreviewProvider {
-    static var previews: some View {
-        UsageHistorycardView()
-    }
-}

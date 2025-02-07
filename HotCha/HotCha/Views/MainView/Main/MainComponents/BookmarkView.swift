@@ -25,6 +25,7 @@ struct BookmarkView: View {
             HStack{
                 Text("즐겨찾기 알림 (2/6)")
                     .font(.pretendard(.semibold, size: 16))
+                    .foregroundStyle(Color("gray900"))
                 Spacer()
 
                 
