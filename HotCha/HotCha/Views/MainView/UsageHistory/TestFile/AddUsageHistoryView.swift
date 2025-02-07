@@ -51,7 +51,7 @@ struct AddUsageHistoryView: View {
                         route_type: routeType,
                         get_off_timestamp: getOffTimestamp,
                         operator_name: operatorName.isEmpty ? nil : operatorName,
-                        operator_no: operatorno.isEmpty ? nil : operatorName,
+                        operator_no: operatorno.isEmpty ? nil : operatorno,
                         vehicle_no: vehicleNo
                     )
                     
