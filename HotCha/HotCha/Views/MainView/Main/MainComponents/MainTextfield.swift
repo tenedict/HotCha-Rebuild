@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTextfiled: View {
     @State private var isTapped: Bool = false
+    @Binding var isEditMode: Bool
     
     var body: some View {
         
@@ -34,6 +35,7 @@ struct MainTextfiled: View {
             .onTapGesture {
                 withAnimation {
                     isTapped = true
+                    isEditMode = false
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     withAnimation {

@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct MainView: View {
+    @State var isEditMode: Bool = false
     var body: some View {
         // 메인뷰 전체
         VStack(spacing: 24) {
             
             // '버스번호를 알려주세요' 텍스트 필드
-            MainTextfiled()
+            MainTextfiled(isEditMode: $isEditMode)
             
             // 즐겨찾기 항목들
-            BookmarkView()
+            BookmarkView(isEditMode: $isEditMode)
 
             
             Spacer()

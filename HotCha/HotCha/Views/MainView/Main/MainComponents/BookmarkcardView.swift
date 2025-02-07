@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-import SwiftUI
-
-struct BookmarkcardView: View {
+struct BookmarkcardnothingView: View {
     let name: String
     let image: String
     
@@ -61,6 +59,8 @@ struct BookmarkcardView: View {
 
     }
 }
+
+
 
 struct BookmarkcardView_Previews: PreviewProvider {
     static var previews: some View {
