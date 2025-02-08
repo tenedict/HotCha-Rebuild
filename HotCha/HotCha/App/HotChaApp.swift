@@ -11,7 +11,7 @@ import SwiftUI
 struct HotChaApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView()
+            AlarmSettingView()
         }
     }
 }
