@@ -12,11 +12,12 @@ struct BookmarkcardnothingView: View {
     let image: String
     
     @State private var isTapped: Bool = false
+    @State private var showingAddBookmark = false
 
 
     var body: some View {
         VStack {
-            VStack{
+            VStack(spacing: 16) {
                 HStack {
                     Image(image)
                     Text(name)
@@ -25,9 +26,8 @@ struct BookmarkcardnothingView: View {
                     Spacer()
                     
                     Image("plusicon")
-                        .resizable()
-                        .frame(width: 14, height: 14)
                 }
+                
                 VStack {
                     HStack{
                         Text("장소와 알림을 등록해")
@@ -40,7 +40,6 @@ struct BookmarkcardnothingView: View {
                 }
                 .foregroundStyle(Color("gray300"))
                 .font(.pretendard(.medium, size: 14))
-                .padding(.top, 16)
             }
             .padding(12)
         }
@@ -53,8 +52,12 @@ struct BookmarkcardnothingView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 withAnimation {
                     isTapped = false
+                    showingAddBookmark = true
                 }
             }
+        }
+        .sheet(isPresented: $showingAddBookmark) {
+            AddBookmarkView(type_name: name)
         }
 
     }
