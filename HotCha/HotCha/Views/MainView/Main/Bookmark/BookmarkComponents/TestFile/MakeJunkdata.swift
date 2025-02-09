@@ -21,6 +21,9 @@ struct AddBookmarkView: View {
     @State private var busNo: String = ""
     @State private var routeType: String = ""
     @State private var bookmarkLabel: String = ""
+    @State private var bookmarktype: Int = 0
+    
+    let type_name: String
     
     var body: some View {
         NavigationStack {
@@ -33,9 +36,21 @@ struct AddBookmarkView: View {
                     TextField("버스 번호", text: $busNo)
                     TextField("노선 타입", text: $routeType)
                     TextField("라벨", text: $bookmarkLabel)
+
+                }
                 }
                 
                 Button("저장") {
+                    if type_name == "집" {
+                        bookmarkLabel = "집"
+                        bookmarktype = 1
+                    } else if type_name == "회사" {
+                        bookmarkLabel = "회사"
+                        bookmarktype = 2
+                    } else {
+                        bookmarktype = 0
+                    }
+
                     let newBookmark = Bookmarkmodel(
                         route_id: routeID,
                         city_code: cityCode,
@@ -43,7 +58,8 @@ struct AddBookmarkView: View {
                         destination_stop_name: destinationStopName,
                         bus_no: busNo,
                         route_type: routeType,
-                        bookmark_label: bookmarkLabel
+                        bookmark_label: bookmarkLabel,
+                        bookmark_type: bookmarktype
                     )
                     modelContext.insert(newBookmark)
                     dismiss()
@@ -59,5 +75,5 @@ struct AddBookmarkView: View {
             }
         }
     }
-}
+
 

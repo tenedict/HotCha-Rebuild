@@ -21,7 +21,7 @@ struct MainUsageHistoryView: View {
 //                    .onTapGesture {
 //                        showinghistory = true
 //                    }
-//                    
+                    
                 
                 ForEach(Usage_history) { history in
                     UsageHistorycardView(history: history)

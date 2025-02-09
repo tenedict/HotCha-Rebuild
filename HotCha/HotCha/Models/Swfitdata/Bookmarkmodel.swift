@@ -16,9 +16,9 @@ class Bookmarkmodel: Identifiable {
     var bus_no: String
     var route_type: String
     var bookmark_label: String
-    
+    var bookmark_type: Int
 
-    init(route_id: String, city_code: String, destination_stop_id: String, destination_stop_name: String, bus_no: String, route_type: String, bookmark_label: String) {
+    init(route_id: String, city_code: String, destination_stop_id: String, destination_stop_name: String, bus_no: String, route_type: String, bookmark_label: String, bookmark_type: Int) {
         self.route_id = route_id
         self.city_code = city_code
         self.destination_stop_id = destination_stop_id
@@ -26,5 +26,6 @@ class Bookmarkmodel: Identifiable {
         self.bus_no = bus_no
         self.route_type = route_type
         self.bookmark_label = bookmark_label
+        self.bookmark_type = bookmark_type
     }
 }

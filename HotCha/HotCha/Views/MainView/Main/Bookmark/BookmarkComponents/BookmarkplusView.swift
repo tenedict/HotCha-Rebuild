@@ -35,7 +35,7 @@ struct BookmarkplusView: View {
             }
         }
         .sheet(isPresented: $showingAddBookmark) {
-            AddBookmarkView()
+            AddBookmarkView(type_name: "")
         }
 
     }

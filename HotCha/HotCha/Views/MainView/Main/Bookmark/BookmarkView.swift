@@ -39,17 +39,33 @@ struct BookmarkView: View {
             }
             .padding(.bottom, 12)
             VStack(spacing: 16) {
-                // 고정된 즐겨찾기
-                HStack(spacing: 15) {
-                    BookmarkcardnothingView(name: "집", image: "houseicon")
-                    BookmarkcardnothingView(name: "회사", image: "buildingicon")
-                }
+                // 집 회사
+                LazyVGrid(columns: columns, spacing: 16) {
+                    let homebookmark = bookmarkdata.filter { $0.bookmark_type == 1 }
+                    if homebookmark.isEmpty {
+                        BookmarkcardnothingView(name: "집", image: "houseicon")
+                        } else {
+                            ForEach(homebookmark) { bookmark in
+                                BookmarkcardcustomView(isEditMode: isEditMode, bookmark: bookmark)
+                            }
+                        }
+                    
+                    let workplacebookmark = bookmarkdata.filter { $0.bookmark_type == 2 }
+                    if workplacebookmark.isEmpty {
+                        BookmarkcardnothingView(name: "회사", image: "buildingicon")
+                        } else {
+                            ForEach(workplacebookmark) { bookmark in
+                                BookmarkcardcustomView(isEditMode: isEditMode, bookmark: bookmark)
+                            }
+                        }
+                    }
                 
                 // 직접 추가하는 즐겨찾기
-                LazyVGrid(columns: columns, spacing: 16) { ForEach(bookmarkdata) { bookmark in
+                let bookmarks = bookmarkdata.filter { $0.bookmark_type == 0 }
+                LazyVGrid(columns: columns, spacing: 16) { ForEach(bookmarks) { bookmark in
                     BookmarkcardcustomView(isEditMode: isEditMode, bookmark: bookmark)
                 }
-                    if bookmarkdata.count < 4 {
+                    if bookmarks.count < 4 {
                         if !isEditMode {
                             BookmarkplusView()
                         }

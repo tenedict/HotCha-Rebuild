@@ -27,10 +27,22 @@ struct BookmarkcardcustomView: View {
         VStack {
             VStack(spacing: 14 ) {
                 HStack {
-                    Image("staricon")
-                    Text(bookmark.bookmark_label)
-                        .font(.pretendard(.bold, size: 14))
                     
+                    if bookmark.bookmark_type ==  1 {
+                        Image("houseicon")
+                        Text(bookmark.bookmark_label)
+                            .font(.pretendard(.bold, size: 14))
+                    }
+                    else if bookmark.bookmark_type ==  2 {
+                        Image("buildingicon")
+                        Text(bookmark.bookmark_label)
+                            .font(.pretendard(.bold, size: 14))
+                    }
+                    else {
+                        Image("staricon")
+                        Text(bookmark.bookmark_label)
+                            .font(.pretendard(.bold, size: 14))
+                    }
                     Spacer()
                     
                     Image(isEditMode ? "deleteicon" :"chevron-righticon")
@@ -44,7 +56,7 @@ struct BookmarkcardcustomView: View {
 
                 }
                 
-                VStack {
+                VStack(spacing: 6) {
                     HStack {
                         BookmarkBusNoView(busNo: bookmark.bus_no, route_type: bookmark.route_type)
                         Spacer()
