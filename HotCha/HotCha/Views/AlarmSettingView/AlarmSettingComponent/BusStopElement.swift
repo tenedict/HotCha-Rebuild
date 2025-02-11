@@ -17,6 +17,7 @@ struct BusStopElement: View {
             // 정류장 이미지 표시 영역
             ZStack {
                 VStack (spacing: 0) {
+                    // TODO: 첫번째와 마지막 정류장 line 표시
                     BusStopLine(line_color: stopCase.line_color)
                         .padding(0)
                     BusStopLine(line_color: stopCase.line_color)
@@ -32,7 +33,7 @@ struct BusStopElement: View {
                         .font(.pretendard(.medium, size: 16))
                         .foregroundStyle(stopCase.text_color)
                     
-                    if let icon = stopCase.destination_icon {
+                    if let icon = stopCase.trailing_icon {
                         Rectangle()
                             .frame(width: 36, height: 28)
                             .cornerRadius(13)
@@ -53,7 +54,7 @@ struct BusStopElement: View {
             .padding(EdgeInsets(top: 20, leading: 35, bottom: 20, trailing: 0))
         }
         .frame(maxWidth: .infinity, maxHeight: 78, alignment: .leading)
-        .padding(.leading, stopCase.leading_padding)
+        .padding(.leading, 60)
         .background(stopCase.background_color)
         .ignoresSafeArea()
         
@@ -67,7 +68,7 @@ struct BusStopLine: View {
     var body: some View {
         Rectangle()
             .frame(width: 6, height: 39)
-            .foregroundStyle(.gray150)
+            .foregroundStyle(line_color)
     }
 }
 
@@ -94,97 +95,6 @@ struct BusStopPoint: View {
                     .frame(width: inner_circle_size, height: inner_circle_size)
                     .foregroundStyle(.gray900)
             )
-    }
-}
-
-
-/// 정류장 Element의 경우의 수
-enum BusStopElementCase {
-    case ableStop // 일반 정류장
-    case disableStop // 지나온 정류장
-    case currentStop // 현재 위치한 정류장
-    case alarmStop // 알람이 울릴 정류장
-    case destinationStop // 목적지 정류장
-    
-    
-    var text_color: Color {
-        switch self {
-        case .ableStop:
-            return .gray100
-        case .disableStop:
-            return .gray // 수정필요
-        case .currentStop, .alarmStop, .destinationStop:
-            return .mainpurple
-        }
-    }
-    
-    var line_color: Color {
-        switch self {
-        case .disableStop:
-            return .gray // 수정필요
-        default:
-            return .gray150
-        }
-    }
-    
-    var outer_circle_size: CGFloat {
-        switch self {
-        case .alarmStop, .destinationStop:
-            return 22
-        default:
-            return 16
-        }
-    }
-    
-    var outer_circle_color: Color {
-        switch self {
-        case .disableStop:
-            return .gray // 수정필요
-        case .currentStop, .alarmStop, .destinationStop:
-            return .mainpurple
-        default:
-            return .gray150
-        }
-    }
-    
-    var background_color: Color {
-        switch self {
-        case .alarmStop, .destinationStop:
-            return .purpleOpacity10
-        default:
-            return .clear
-        }
-    }
-    
-    var is_shadow: Bool {
-        switch self {
-        case .currentStop:
-            return true
-        default:
-            return false
-        }
-    }
-    
-    var destination_icon: Image? {
-        switch self {
-        case .alarmStop:
-            return Image(systemName: "bell")
-        case .destinationStop:
-            return Image("map_pin")
-        default:
-            return nil
-        }
-    }
-    
-    var leading_padding: CGFloat {
-        switch self {
-        case .alarmStop, .destinationStop:
-            return 57
-        case .currentStop:
-            return 48
-        default:
-            return 60
-        }
     }
 }
 
