@@ -1,7 +1,7 @@
 ---
-name: "[Feat/담당자] 페이지명 기능 "
+name: Feature_템플릿
 about: "---"
-title: ''
+title: "[Feat/담당자] 페이지명 기능 "
 labels: ''
 assignees: ''
 
