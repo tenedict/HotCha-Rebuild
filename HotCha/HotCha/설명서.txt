@@ -1,29 +1,24 @@
 
 
-폰트를 보면
-.font(.system(size: 24, weight: .semibold))
-이거는 기본
+    폰트 사용법
+    
+    ex)
+    .font(.heading1)
+    .font(.sub_heading1)
+    .font(.body1)
+    .font(.caption)
 
-
-.font(.pretendard(.semibold, size: 24))
-우리는 이것을 사용해야 합니다.
-
-            Text("안녕 세상")
-                .font(.pretendard(.bold, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.semibold, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.light, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.heavy, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.ultraLight, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.light, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.thin, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.black, size: 24))
-            Text("안녕 세상")
-                .font(.pretendard(.medium, size: 24))
-
+    figma에서는 앞글자가 대문자로 되어 있지만, 변수명은 대부분 소문자로 사용하기 때문에 소문자로 작성했습니다.
+    
+    
+    폰트 설명
+    
+    Heading 1 : Bold 24
+    Heading 2 : Medium 24
+    Heading 3 : SemiBold 20
+    Sub Heading 1 : SemiBold 18
+    Sub Heading 2 : SemiBold 16
+    Sub Heading 3 : Medium 16
+    Body 1 : SemiBold 14
+    Body 2 : Medium 14
+    caption : Medium 12
